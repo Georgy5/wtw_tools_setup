@@ -20,7 +20,7 @@ describe('localStorage', () => {
     });
 
     it('is expected to store the value in the chosen key', () => {
-      expect($subject.data).to.eql('bar');
+      expect($subject.data.foo).to.eql('bar');
     });
   })
 });
