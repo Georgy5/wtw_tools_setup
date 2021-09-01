@@ -36,10 +36,18 @@ describe('localStorage', () => {
       });
 
       it('is expected to return a string', () => {
-        expect(typeof($response)).to.eql('String');
+        expect(typeof($response)).to.eql('string');
       });
     });
 
-    
+    context('non existing key', () => {
+      def('respone', () => $subject.getItem('nonExistingKey'))
+
+      it('is expected to retrun null', () => {
+        expect($response).to.eql(null);
+      });
+    });
   })
+
+  
 });
