@@ -5,3 +5,11 @@ use(sinonChai);
 
 global.expect = expect;
 global.sinon = sinon;
+
+global.window = {};
+global.window.localStorage = {
+  setItem() {},
+  getItem() {},
+  removeItem() {},
+  clear() {}
+};
