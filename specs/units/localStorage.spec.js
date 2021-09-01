@@ -61,4 +61,16 @@ describe('localStorage', () => {
       expect($subject.data).to.not.haveOwnProperty('keyToRemove');
     });
   })
+
+  describe('#clear', () => {
+
+    before(() =>{
+      $subject.setItem('key1', 'bar');
+    });
+
+    it('is expected to clear all data', ()=> {
+      $subject.clear()
+      expect($subject.data).to.not.haveOwnProperty('key1');
+    });
+  })
 });
