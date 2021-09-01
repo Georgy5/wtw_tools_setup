@@ -49,5 +49,16 @@ describe('localStorage', () => {
     });
   })
 
-  
+  describe('#removetItem', () => {
+
+    before(() =>{
+      $subject.setItem('foo', 'bar');
+      $subject.setItem('keyToRemove', 'some value');
+    });
+
+    it('is expected to remove the item', ()=> {
+      $subject.removeItem('keyToRemove')
+      expect($subject.data).to.not.haveOwnProperty('keyToRemove');
+    });
+  })
 });
