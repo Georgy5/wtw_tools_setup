@@ -23,4 +23,23 @@ describe('localStorage', () => {
       expect($subject.data.foo).to.eql('bar');
     });
   })
+
+  describe('#getItem', () => {
+    context('existing key', () => {
+      def('respone', () => $subject.getItem('foo'))
+      before(() =>{
+        $subject.setItem('foo', 'baz');
+      });
+
+      it('is expected to return the value', () => {
+        expect($response).to.eql('baz');
+      });
+
+      it('is expected to return a string', () => {
+        expect(typeof($response)).to.eql('String');
+      });
+    });
+
+    
+  })
 });
