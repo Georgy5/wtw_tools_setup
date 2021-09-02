@@ -57,7 +57,7 @@ describe('localStorage', () => {
     });
 
     it('is expected to remove the item', ()=> {
-      $subject.removeItem('keyToRemove')
+      $subject.removeItem('keyToRemove');
       expect($subject.data).to.not.haveOwnProperty('keyToRemove');
     });
   })
@@ -69,7 +69,7 @@ describe('localStorage', () => {
     });
 
     it('is expected to clear all data', ()=> {
-      $subject.clear()
+      $subject.clear();
       expect($subject.data).to.not.haveOwnProperty('key1');
     });
   })
