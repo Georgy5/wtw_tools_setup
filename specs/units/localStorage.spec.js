@@ -26,7 +26,7 @@ describe('localStorage', () => {
 
   describe('#getItem', () => {
     context('existing key', () => {
-      def('respone', () => $subject.getItem('foo'))
+      def('response', () => $subject.getItem('foo'))
       before(() =>{
         $subject.setItem('foo', 'baz');
       });
@@ -41,7 +41,7 @@ describe('localStorage', () => {
     });
 
     context('non existing key', () => {
-      def('respone', () => $subject.getItem('nonExistingKey'))
+      def('response', () => $subject.getItem('nonExistingKey'))
 
       it('is expected to retrun null', () => {
         expect($response).to.eql(null);
