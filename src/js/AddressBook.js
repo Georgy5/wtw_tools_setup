@@ -1,6 +1,8 @@
 class AddressBook {
-  create() {
-    
+  create(data) {
+    let contact = []
+    contacts.push(data)
+    window.localStorage.setItem('contacts', JSON.stringify(contacts))
   }
 }
 
