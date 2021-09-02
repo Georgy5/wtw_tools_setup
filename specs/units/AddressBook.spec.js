@@ -9,7 +9,7 @@ describe("AddressBook", () => {
 
   describe('#create', () => {
     it(() => is.expected.to.respondTo('create'));
-    let setItemSpy
+    let setItemSpy;
     def('validData', {
       name: 'Thomas',
       email: 'thomas@somewhere.com',
@@ -20,8 +20,10 @@ describe("AddressBook", () => {
     });
 
     context('with valid data', () => {
-      def('contactsInStorage', () => JSON.parse(window.localStorage.getItem('contacts')));
       def('response', () => $subject.create($validData));
+      def('contactsInStorage', () =>
+        JSON.parse(window.localStorage.getItem('contacts'))
+      );
 
       beforeEach(() => {
         $response;
@@ -32,7 +34,7 @@ describe("AddressBook", () => {
       });
 
       it('is expected to store a contact', ()=> {
-        expect($contactsInStorage).to.have.lenght(1);
+        expect($contactsInStorage).to.have.length(1);
       });
     });
   });
