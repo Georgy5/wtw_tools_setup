@@ -17,7 +17,7 @@ global.window.localStorage = {
     return value ? value : null
   },
   removeItem(key) {
-    delete this.date[key]
+    delete this.data[key]
   },
   clear() {
     this.data = {}
