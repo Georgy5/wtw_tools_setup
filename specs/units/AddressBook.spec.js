@@ -21,7 +21,7 @@ describe("AddressBook", () => {
 
     context('with valid data', () => {
       def('contactsInStorage', () => JSON.parse(window.localStorage.getItem('contacts')));
-      def('response', () => $subject.creata($validData));
+      def('response', () => $subject.create($validData));
 
       beforeEach(() => {
         $response;
