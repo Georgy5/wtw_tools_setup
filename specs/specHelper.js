@@ -12,7 +12,14 @@ global.window.localStorage = {
   setItem(key, value) {
     this.data[key] = value
   },
-  getItem() {},
-  removeItem() {},
-  clear() {}
+  getItem(key) {
+    const value = this.data[key]
+    return value ? value : null
+  },
+  removeItem(key) {
+    delete this.date[key]
+  },
+  clear() {
+    this.data = {}
+  }
 };
