@@ -43,7 +43,7 @@ describe('localStorage', () => {
     context('non existing key', () => {
       def('response', () => $subject.getItem('nonExistingKey'))
 
-      it('is expected to retrun null', () => {
+      it('is expected to return null', () => {
         expect($response).to.eql(null);
       });
     });
